@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Live cricket score dashboard - view ongoing matches, scores, overs, and status." />
+  <title>Cricket Score Dashboard 🏏</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-inner">
+      <h1>Cricket Score Dashboard 🏏</h1>
+      <p class="subtitle">Live match scores, team info, and status — refreshed automatically.</p>
+
+      <div class="controls">
+        <div class="search-wrapper">
+          <label for="search" class="visually-hidden">Search matches</label>
+          <input id="search" type="search" placeholder="Search team or match" autocomplete="off" />
+          <button id="clearSearch" class="btn-secondary" title="Clear search">✕</button>
+        </div>
+
+        <div class="actions">
+          <button id="refreshBtn" class="btn" type="button">Refresh</button>
+          <label class="toggle">
+            <input id="autoRefresh" type="checkbox" />
+            <span class="slider"></span>
+            <span class="toggle-label">Auto Refresh</span>
+          </label>
+        </div>
+      </div>
+
+      <div id="statusMessage" class="status-message" aria-live="polite"></div>
+    </div>
+  </header>
+
+  <main class="content">
+    <section aria-label="Live matches" class="matches" id="matches"></section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Built with HTML, CSS, and JavaScript. Fetching data from a public cricket API.
+      <br />
+      <small>Update your <code>script.js</code> API key to start seeing live scores.</small>
+    </p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
